@@ -11,7 +11,7 @@ This repository contains implementations and experiments for two bandit-based al
 - [UCB-FE/UCB-FE-exp.ipynb](./UCB-FE/UCB-FE-exp.ipynb): Main experiment notebook for UCB-FE
 - [UCB-FE/DatasetDescribe.pdf](./UCB-FE/DatasetDescribe.pdf): Detailed description of the dataset used in UCB-FE experiments
 - [UCB-FE/weights/](./UCB-FE/weights/): Directory for pre-trained model weights
-- [UCB-FE/data/](./UCB-FE/data/): Directory for pre-trained model weights
+- [UCB-FE/data/](./UCB-FE/data/): Directory for the presented results in the article (absolute values)
 
 
 ### AuctionUCB-PBM
