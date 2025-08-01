@@ -38,8 +38,4 @@ conda env create -n ucbBasedFE -f environment.yml
 ## Running Experiments
 
 ### UCB-FE
-To run the UCB-FE experiments:
-
-```bash
-python UCB-FE/utils_ucb_fe.py
-```
+To run the UCB-FE experiments use corresponding notebooks [1](./UCB-FE/1%20UCB-FE-exp.ipynb), [2](./UCB-FE/2%20UCB-FE-metrics-exp.ipynb), [3](./UCB-FE/3%20UCB-FE-roc-auc-exp.ipynb), [4](./UCB-FE/4%20UCB-FE-ndcg-exp.ipynb) sequentially.
