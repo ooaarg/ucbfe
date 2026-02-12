@@ -1,0 +1,172 @@
+### Tiny data for tests only
+Industrial:  # dataset_id
+    data_root: ../../../data/
+    data_format: parquet
+    train_data: ../../../data/train_Industrial.parquet
+    valid_data: ../../../data/test_Industrial.parquet
+    test_data: ../../../data/test_Industrial.parquet
+    # tmp_data: ../../../data/tmp_int.parquet
+    min_categr_count: 1
+    feature_cols:
+        # Categorical features
+        - {name: "mcat", active: True, dtype: str, type: categorical}
+        - {name: "mcat_1", active: True, dtype: str, type: categorical}
+        - {name: "mcat_2", active: True, dtype: str, type: categorical}
+        - {name: "mcat_3", active: True, dtype: str, type: categorical}
+        - {name: "mcat_4", active: True, dtype: str, type: categorical}
+        - {name: "mcat_5", active: True, dtype: str, type: categorical}
+        - {name: "cat_id", active: True, dtype: str, type: categorical}
+        - {name: "item_region_id", active: True, dtype: str, type: categorical}
+        - {name: "item_location_id", active: True, dtype: str, type: categorical}
+        
+        # Boolean feature
+        - {name: "same_loc", active: True, dtype: int, type: categorical}
+
+        # Inactive metadata features (saved but not used in model)
+        - {name: "request_id", active: True, dtype: str, type: meta}
+        - {name: "item_id", active: True, dtype: str, type: meta}
+        - {name: "item_imps", active: True, dtype: int, type: meta}
+        - {name: "item_shows", active: True, dtype: int, type: meta}
+
+        
+        # Numerical features with default settings
+        - {name: ["bm_1", "bm_2", "bm_3", "bm_4"], active: True, dtype: float, type: numeric}
+        - {name: ["tf_idf_1", "tf_idf_2", "tf_idf_3", "tf_idf_4"], active: True, dtype: float, type: numeric}
+        - {name: ["idf_1", "idf_2", "idf_3", "idf_4", "idf_5", "idf_6", "idf_7", "idf_8", "idf_9", "idf_10", "idf_11"], active: True, dtype: float, type: numeric}
+        - {name: ["trf_1", "trf_2", "trf_3", "trf_4", "trf_5", "trf_6"], active: True, dtype: float, type: numeric}
+        - {name: ["query_info_1", "query_info_2", "query_info_3", "query_info_4"], active: True, dtype: float, type: numeric}
+        - {name: ["item_info_1", "item_info_2", "item_info_3", "item_info_4", "item_info_5"], active: True, dtype: float, type: numeric}
+        - {name: "dist", active: True, dtype: float, type: numeric}
+        - {name: "item_delivery", active: True, dtype: float, type: numeric}
+        - {name: ["word_count_1", "word_count_2", "word_count_3", "word_count_4", "word_count_5"], active: True, dtype: float, type: numeric}
+        - {name: ["hit_count_1", "hit_count_2", "hit_count_3"], active: True, dtype: float, type: numeric}
+        - {name: ["hit_pos_1", "hit_pos_2", "hit_pos_3", "hit_pos_4"], active: True, dtype: float, type: numeric}
+        - {name: ["len_1", "len_2", "len_3"], active: True, dtype: float, type: numeric}
+        - {name: ["lcs_1", "lcs_2", "lcs_3", "lcs_4", "lcs_5"], active: True, dtype: float, type: numeric}
+        - {name: ["wlccs_1", "wlccs_2", "wlccs_3", "wlccs_4"], active: True, dtype: float, type: numeric}
+        - {name: ["lccs_1", "lccs_2", "lccs_3", "lccs_4"], active: True, dtype: float, type: numeric}
+        - {name: ["atc_1", "atc_2", "atc_3"], active: True, dtype: float, type: numeric}
+        - {name: ["phrase_decay_1", "phrase_decay_2", "phrase_decay_3", "phrase_decay_4", "phrase_decay_5", "phrase_decay_6"], active: True, dtype: float, type: numeric}
+        - {name: ["group_ctr_1", "group_ctr_2", "group_ctr_3"], active: True, dtype: float, type: numeric}
+        - {name: "ctc", active: True, dtype: float, type: numeric}
+        - {name: "ctr", active: True, dtype: float, type: numeric}
+    
+    label_col: {name: target,active: True, dtype: float}
+
+mq2007:  # dataset_id
+    data_root: ../../../data/
+    data_format: parquet
+    train_data: ../../../data/MQ_2007/train_MQ_2007.parquet
+    valid_data: ../../../data/MQ_2007/test_MQ_2007.parquet
+    test_data: ../../../data/MQ_2007/test_MQ_2007.parquet
+    # tmp_data: ../../../data/tmp_int.parquet
+    min_categr_count: 1
+    feature_cols:
+        # Metadata features (saved but not used in model training)
+        - {name: "request_id", active: True, dtype: str, type: meta}
+        - {name: "item_id", active: True, dtype: str, type: meta}
+        - {name: "item_imps", active: True, dtype: int, type: meta}
+        - {name: "item_shows", active: True, dtype: int, type: meta}
+        
+        # Numerical features - all columns 1-46
+        - {name: "ctr", active: True, dtype: float, type: numeric}
+        - {name: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], active: True, dtype: float, type: numeric}
+        - {name: ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20"], active: True, dtype: float, type: numeric}
+        - {name: ["21", "22", "23", "24", "25", "26", "27", "28", "29", "30"], active: True, dtype: float, type: numeric}
+        - {name: ["31", "32", "33", "34", "35", "36", "37", "38", "39", "40"], active: True, dtype: float, type: numeric}
+        - {name: ["41", "42", "43", "44", "45", "46"], active: True, dtype: float, type: numeric}
+    
+    label_col: {name: target, active: True, dtype: float}
+
+mq2008:  # dataset_id
+    data_root: ../../../data/
+    data_format: parquet
+    train_data: ../../../data/MQ_2008/train_MQ_2008.parquet
+    valid_data: ../../../data/MQ_2008/test_MQ_2008.parquet
+    test_data: ../../../data/MQ_2008/test_MQ_2008.parquet
+    # tmp_data: ../../../data/tmp_int.parquet
+    min_categr_count: 1
+    feature_cols:
+        # Metadata features (saved but not used in model training)
+        - {name: "request_id", active: True, dtype: str, type: meta}
+        - {name: "item_id", active: True, dtype: str, type: meta}
+        - {name: "item_imps", active: True, dtype: int, type: meta}
+        - {name: "item_shows", active: True, dtype: int, type: meta}
+        
+        # Numerical features - all columns 1-46
+        - {name: "ctr", active: True, dtype: float, type: numeric}
+        - {name: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], active: True, dtype: float, type: numeric}
+        - {name: ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20"], active: True, dtype: float, type: numeric}
+        - {name: ["21", "22", "23", "24", "25", "26", "27", "28", "29", "30"], active: True, dtype: float, type: numeric}
+        - {name: ["31", "32", "33", "34", "35", "36", "37", "38", "39", "40"], active: True, dtype: float, type: numeric}
+        - {name: ["41", "42", "43", "44", "45", "46"], active: True, dtype: float, type: numeric}
+    
+    label_col: {name: target, active: True, dtype: float}
+
+MSLR10K:  # dataset_id
+    data_root: ../../../data/
+    data_format: parquet
+    train_data: ../../../data/MSLR_10K/train_MSLR_10K.parquet
+    valid_data: ../../../data/MSLR_10K/test_MSLR_10K.parquet
+    test_data: ../../../data/MSLR_10K/test_MSLR_10K.parquet
+    # tmp_data: ../../../data/tmp_int.parquet
+    min_categr_count: 1
+    feature_cols:
+        # Metadata features (saved but not used in model training)
+        - {name: "request_id", active: True, dtype: str, type: meta}
+        - {name: "item_id", active: True, dtype: str, type: meta}
+        - {name: "item_imps", active: True, dtype: int, type: meta}
+        - {name: "item_shows", active: True, dtype: int, type: meta}
+        
+        # Numerical features 1-136 (grouped for readability)
+        - {name: "ctr", active: True, dtype: float, type: numeric}
+        - {name: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], active: True, dtype: float, type: numeric}
+        - {name: ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20"], active: True, dtype: float, type: numeric}
+        - {name: ["21", "22", "23", "24", "25", "26", "27", "28", "29", "30"], active: True, dtype: float, type: numeric}
+        - {name: ["31", "32", "33", "34", "35", "36", "37", "38", "39", "40"], active: True, dtype: float, type: numeric}
+        - {name: ["41", "42", "43", "44", "45", "46", "47", "48", "49", "50"], active: True, dtype: float, type: numeric}
+        - {name: ["51", "52", "53", "54", "55", "56", "57", "58", "59", "60"], active: True, dtype: float, type: numeric}
+        - {name: ["61", "62", "63", "64", "65", "66", "67", "68", "69", "70"], active: True, dtype: float, type: numeric}
+        - {name: ["71", "72", "73", "74", "75", "76", "77", "78", "79", "80"], active: True, dtype: float, type: numeric}
+        - {name: ["81", "82", "83", "84", "85", "86", "87", "88", "89", "90"], active: True, dtype: float, type: numeric}
+        - {name: ["91", "92", "93", "94", "95", "96", "97", "98", "99", "100"], active: True, dtype: float, type: numeric}
+        - {name: ["101", "102", "103", "104", "105", "106", "107", "108", "109", "110"], active: True, dtype: float, type: numeric}
+        - {name: ["111", "112", "113", "114", "115", "116", "117", "118", "119", "120"], active: True, dtype: float, type: numeric}
+        - {name: ["121", "122", "123", "124", "125", "126", "127", "128", "129", "130"], active: True, dtype: float, type: numeric}
+        - {name: ["131", "132", "133", "134", "135", "136"], active: True, dtype: float, type: numeric}
+    
+    label_col: {name: target, active: True, dtype: float}
+
+MSLR30K:  # dataset_id
+    data_root: ../../../data/
+    data_format: parquet
+    train_data: ../../../data/MSLR_30K/train_MSLR_30K.parquet
+    valid_data: ../../../data/MSLR_30K/test_MSLR_30K.parquet
+    test_data: ../../../data/MSLR_30K/test_MSLR_30K.parquet
+    # tmp_data: ../../../data/tmp_int.parquet
+    min_categr_count: 1
+    feature_cols:
+        # Metadata features (saved but not used in model training)
+        - {name: "request_id", active: True, dtype: str, type: meta}
+        - {name: "item_id", active: True, dtype: str, type: meta}
+        - {name: "item_imps", active: True, dtype: int, type: meta}
+        - {name: "item_shows", active: True, dtype: int, type: meta}
+        
+        # Numerical features 1-136 (grouped for readability)
+        - {name: "ctr", active: True, dtype: float, type: numeric}
+        - {name: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], active: True, dtype: float, type: numeric}
+        - {name: ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20"], active: True, dtype: float, type: numeric}
+        - {name: ["21", "22", "23", "24", "25", "26", "27", "28", "29", "30"], active: True, dtype: float, type: numeric}
+        - {name: ["31", "32", "33", "34", "35", "36", "37", "38", "39", "40"], active: True, dtype: float, type: numeric}
+        - {name: ["41", "42", "43", "44", "45", "46", "47", "48", "49", "50"], active: True, dtype: float, type: numeric}
+        - {name: ["51", "52", "53", "54", "55", "56", "57", "58", "59", "60"], active: True, dtype: float, type: numeric}
+        - {name: ["61", "62", "63", "64", "65", "66", "67", "68", "69", "70"], active: True, dtype: float, type: numeric}
+        - {name: ["71", "72", "73", "74", "75", "76", "77", "78", "79", "80"], active: True, dtype: float, type: numeric}
+        - {name: ["81", "82", "83", "84", "85", "86", "87", "88", "89", "90"], active: True, dtype: float, type: numeric}
+        - {name: ["91", "92", "93", "94", "95", "96", "97", "98", "99", "100"], active: True, dtype: float, type: numeric}
+        - {name: ["101", "102", "103", "104", "105", "106", "107", "108", "109", "110"], active: True, dtype: float, type: numeric}
+        - {name: ["111", "112", "113", "114", "115", "116", "117", "118", "119", "120"], active: True, dtype: float, type: numeric}
+        - {name: ["121", "122", "123", "124", "125", "126", "127", "128", "129", "130"], active: True, dtype: float, type: numeric}
+        - {name: ["131", "132", "133", "134", "135", "136"], active: True, dtype: float, type: numeric}
+    
+    label_col: {name: target, active: True, dtype: float}

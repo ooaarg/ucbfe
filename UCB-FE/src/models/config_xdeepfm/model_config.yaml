@@ -1,0 +1,169 @@
+Base:
+    model_root: './checkpoints/'
+    num_workers: 3
+    verbose: 1
+    early_stop_patience: 2
+    pickle_feature_encoder: True
+    save_best_only: True
+    eval_steps: null
+    debug_mode: False
+    group_id: null
+    ordered_features: null
+    feature_specs: null
+
+Base:
+    model_root: './checkpoints/'
+    num_workers: 3
+    verbose: 1
+    early_stop_patience: 2
+    pickle_feature_encoder: True
+    save_best_only: True
+    eval_steps: null
+    debug_mode: False
+    group_id: null
+    use_features: null
+    feature_specs: null
+    feature_config: null
+
+xDeepFM_test:
+    model: xDeepFM
+    dataset_id: Industrial
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 4.0e-3
+    embedding_regularizer: 1.e-7
+    net_regularizer: 0.1
+    batch_size: 4096
+    embedding_dim: 8
+    dnn_hidden_units: [64, 32]
+    cin_hidden_units: [10, 10]
+    hidden_activations: relu
+    net_dropout: 0.1
+    batch_norm: True
+    epochs: 10
+    shuffle: True
+    seed: 2019
+    monitor: 'AUC'
+    monitor_mode: 'max'
+    max_gradient_norm: 0.1
+
+xDeepFM_test_0.614:
+    model: xDeepFM
+    dataset_id: Industrial
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 4.0e-3
+    embedding_regularizer: 1.e-7
+    net_regularizer: 0.1
+    batch_size: 4096
+    embedding_dim: 8
+    dnn_hidden_units: [64, 32]
+    cin_hidden_units: [10, 10]
+    hidden_activations: relu
+    net_dropout: 0.1
+    batch_norm: True
+    epochs: 10
+    shuffle: True
+    seed: 2019
+    monitor: 'AUC'
+    monitor_mode: 'max'
+    max_gradient_norm: 0.1
+
+xDeepFM_mq2007:
+    model: xDeepFM
+    dataset_id: mq2007
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-8
+    net_regularizer: 0
+    batch_size: 128
+    embedding_dim: 4
+    dnn_hidden_units: [64, 32]
+    cin_layer_units: [10, 10]
+    hidden_activations: relu
+    net_dropout: 0
+    batch_norm: False
+    epochs: 5
+    shuffle: True
+    seed: 2019
+    monitor: 'AUC'
+    monitor_mode: 'max'
+
+xDeepFM_mq2008:
+    model: xDeepFM
+    dataset_id: mq2008
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.e-3
+    embedding_regularizer: 1.e-8
+    net_regularizer: 0
+    batch_size: 128
+    embedding_dim: 4
+    dnn_hidden_units: [64, 32]
+    cin_layer_units: [10, 10]
+    hidden_activations: relu
+    net_dropout: 0
+    batch_norm: False
+    epochs: 5
+    shuffle: True
+    seed: 2019
+    monitor: 'AUC'
+    monitor_mode: 'max'
+
+xDeepFM_MSLR_10K:
+    model: xDeepFM
+    dataset_id: MSLR10K
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-3
+    embedding_regularizer: 1.e-8
+    net_regularizer: 0.1
+    batch_size: 1024
+    embedding_dim: 8
+    dnn_hidden_units: [64, 32]
+    cin_hidden_units: [16, 16]
+    hidden_activations: relu
+    net_dropout: 0.1
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2019
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+    max_gradient_norm: 0.1
+
+
+xDeepFM_MSLR_30K:
+    model: xDeepFM
+    dataset_id: MSLR30K
+    loss: 'binary_crossentropy'
+    metrics: ['logloss', 'AUC']
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 4.0e-3
+    embedding_regularizer: 1.e-8
+    net_regularizer: 0.1
+    batch_size: 4096
+    embedding_dim: 8
+    dnn_hidden_units: [64, 32]
+    cin_hidden_units: [16, 16]
+    hidden_activations: relu
+    net_dropout: 0.1
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 2019
+    monitor: {'AUC': 1, 'logloss': -1}
+    monitor_mode: 'max'
+    max_gradient_norm: 0.1
