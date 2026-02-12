@@ -1,9 +1,8 @@
 # UCB-Based Feature Engineering for Cold-Start in Recommenders
 
-This repository contains implementations and experiments for two bandit-based algorithms:
+This repository contains implementations and experiments for UCB-based algorithm:
 
-1. **UCB-FE (Upper Confidence Bound Feature Engineering)**: An approach for cold-start recommendation systems
-2. **AuctionUCB-PBM**: A bandit-based algorithm for ranking with a fixed fee in advertising platforms
+ **UCB-FE (Upper Confidence Bound Feature Engineering)**: An approach for cold-start recommendation systems
 
 ## Repository Structure
 
@@ -15,7 +14,7 @@ This repository contains implementations and experiments for two bandit-based al
 
 
 ### Theory
-- [Theory/pbm_ucb.py](./Theory/pbm_ucb.py): Implementation of the PBM-UCB algorithm
+- [Theory/pbm_ucb.py](./Theory/pbm_ucb.py): Implementation of the theoretical algorithm
 - [Theory/PBM_UCB.ipynb](./Theory/PBM_UCB.ipynb): Notebook with running results and analysis
 
 ## Data and Weights
