@@ -8,15 +8,15 @@ This repository contains implementations and experiments for two bandit-based al
 ## Repository Structure
 
 ### UCB-FE
-- [UCB-FE/UCB-FE-exp.ipynb](./UCB-FE/UCB-FE-exp.ipynb): Main experiment notebook for UCB-FE
+- [UCB-FE/src/](./UCB-FE/src/): Main code for the experiments from the original paper
 - [UCB-FE/DatasetDescribe.pdf](./UCB-FE/DatasetDescribe.pdf): Detailed description of the dataset used in UCB-FE experiments
 - [UCB-FE/weights/](./UCB-FE/weights/): Directory for pre-trained model weights
 - [UCB-FE/data/](./UCB-FE/data/): Directory for the presented results in the article (absolute values)
 
 
-### AuctionUCB-PBM
-- [AuctionUCB-PBM/pbm_ucb.py](./AuctionUCB-PBM/pbm_ucb.py): Implementation of the PBM-UCB algorithm
-- [AuctionUCB-PBM/PBM_UCB.ipynb](./AuctionUCB-PBM/PBM_UCB.ipynb): Notebook with running results and analysis
+### Theory
+- [Theory/pbm_ucb.py](./Theory/pbm_ucb.py): Implementation of the PBM-UCB algorithm
+- [Theory/PBM_UCB.ipynb](./Theory/PBM_UCB.ipynb): Notebook with running results and analysis
 
 ## Data and Weights
 
@@ -38,4 +38,4 @@ conda env create -n ucbBasedFE -f environment.yml
 ## Running Experiments
 
 ### UCB-FE
-To run the UCB-FE experiments use corresponding notebooks [1](./UCB-FE/1%20UCB-FE-exp.ipynb), [2](./UCB-FE/2%20UCB-FE-metrics-exp.ipynb), [3](./UCB-FE/3%20UCB-FE-roc-auc-exp.ipynb), [4](./UCB-FE/4%20UCB-FE-ndcg-exp.ipynb) sequentially.
+To run the UCB-FE experiments you can use script [UCB-FE/run.sh](./UCB-FE/src/run.sh).
