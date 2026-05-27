@@ -2,7 +2,10 @@
 
 This repository contains implementations and experiments for UCB-based algorithm:
 
- **UCB-FE (Upper Confidence Bound Feature Engineering)**: An approach for cold-start recommendation systems
+**UCB-FE (Upper Confidence Bound Feature Engineering)**: An approach for cold-start recommendation systems
+
+The link for the paper:
+[Link to be provided]
 
 ## Repository Structure
 
@@ -13,13 +16,9 @@ This repository contains implementations and experiments for UCB-based algorithm
 - [UCB-FE/data/](./UCB-FE/data/): Directory for the presented results in the article (absolute values)
 
 
-### Theory
-- [Theory/pbm_ucb.py](./Theory/pbm_ucb.py): Implementation of the theoretical algorithm
-- [Theory/PBM_UCB.ipynb](./Theory/PBM_UCB.ipynb): Notebook with running results and analysis
+## Data
 
-## Data and Weights
-
-The pre-trained weights and data for UCB-FE experiments can be downloaded from:
+The data for UCB-FE experiments can be downloaded from:
 [Link to be provided]
 
 ## Installation
