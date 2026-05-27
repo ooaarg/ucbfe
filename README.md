@@ -26,7 +26,7 @@ The pre-trained weights and data for UCB-FE experiments can be downloaded from:
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone git@github.com:ooaarg/ucbfe.git
 ```
 
 2. Install dependencies:
