@@ -4,8 +4,12 @@ This repository contains implementations and experiments for UCB-based algorithm
 
 **UCB-FE (Upper Confidence Bound Feature Engineering)**: An approach for cold-start recommendation systems
 
-The link for the paper:
-[Link to be provided]
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.20433675">
+    <img alt="Data: Zenodo DOI 10.5281/zenodo.20433675" src="https://img.shields.io/badge/Data-Zenodo%20DOI-1682D4?style=for-the-badge&logo=zenodo&logoColor=white">
+  </a>
+  <img alt="Main paper: To Be Done" src="https://img.shields.io/badge/Main%20Paper-To%20Be%20Done-9CA3AF?style=for-the-badge">
+</p>
 
 ## Repository Structure
 
@@ -18,8 +22,8 @@ The link for the paper:
 
 ## Data
 
-The data for UCB-FE experiments can be downloaded from:
-[Link to be provided]
+The data for UCB-FE experiments can be downloaded from Zenodo:
+[https://doi.org/10.5281/zenodo.20433675](https://doi.org/10.5281/zenodo.20433675)
 
 ## Installation
 
